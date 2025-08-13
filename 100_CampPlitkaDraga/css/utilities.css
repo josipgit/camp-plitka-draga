@@ -1,0 +1,42 @@
+/* Pomoćne klase */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn--primary {
+    background-color: #2a5d84;
+    color: white;
+}
+
+.btn--primary:hover {
+    background-color: #1e4566;
+}
+
+.btn--secondary {
+    background-color: #f8f9fa;
+    color: #212529;
+    border: 1px solid #dee2e6;
+}
+
+.btn--secondary:hover {
+    background-color: #e9ecef;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #2a5d84;
+}
