@@ -1,5 +1,5 @@
 
-# Camp Plitka Draga — Vite + React + SCSS (HR/EN)
+# Villa Radic — Vite + React + SCSS (HR/EN)
 
 Gotov osnovni front-end s komponentama, placeholder slikama i HR/EN language switcherom.
 
@@ -10,9 +10,8 @@ gdje se nalazi package.json datoteka.
 Koraci:
 Otvorite terminal (PowerShell, CMD, Git Bash, itd.)
 Idite u folder projekta (gdje je package.json):
-cd C:\putanja\do\projekta\CampPlitkaDraga
+cd C:\putanja\do\projekta\Villaradic
 Pokrenite instalaciju:
-
 bash
 npm install
 ```bash

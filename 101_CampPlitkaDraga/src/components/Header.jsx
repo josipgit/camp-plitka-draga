@@ -10,7 +10,7 @@ export default function Header() {
     <header className="header">
       <div className="container navbar">
         <div className="brand">
-          <div className="logo">CP</div>
+          <div className="logo">VR</div>
           <div>
             <div>{t('header.title')}</div>
             <small style={{color: '#6b7280'}}>{t('header.subtitle')}</small>

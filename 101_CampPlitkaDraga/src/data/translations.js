@@ -2,10 +2,10 @@
 export const translations = {
   hr: {
     nav: { hero: 'Početna', gallery: 'Galerija', accommodation: 'Smještaj', contact: 'Kontakt' },
-    header: { title: 'Camp Plitka Draga', subtitle: 'Mir, more i priroda — savršen bijeg.' },
+    header: { title: 'Villa Radic', subtitle: 'Apartmani na plaži' },
     hero: {
-      title: 'Dobrodošli u Camp Plitka Draga',
-      subtitle: 'Kamp uz more s čistim plažama, komfornim parcelama i toplim domaćinstvom.',
+      title: 'Dobrodošli u Villa Radic',
+      subtitle: 'Apartmani na plaži u mirnom okruženju s pogledom na more, privatnim parkingom i vezom za brod.',
       cta: 'Pogledaj galeriju'
     },
     gallery: { title: 'Galerija', captions: ['Plaža', 'Zalazak sunca', 'Parcele', 'Sanitarije', 'Okolica', 'Lounge zona'] },
@@ -31,10 +31,10 @@ export const translations = {
   },
   en: {
     nav: { hero: 'Home', gallery: 'Gallery', accommodation: 'Accommodation', contact: 'Contact' },
-    header: { title: 'Camp Plitka Draga', subtitle: 'Peace, sea and nature — a perfect getaway.' },
+    header: { title: 'Villa Radic', subtitle: 'Beachfront apartments' },
     hero: {
-      title: 'Welcome to Camp Plitka Draga',
-      subtitle: 'Seaside camping with pristine beaches, comfy pitches and warm hospitality.',
+      title: 'Welcome to Villa Radic',
+      subtitle: 'Beachfront apartments in quiet surroundings with sea view, private parking and boat mooring.',
       cta: 'View gallery'
     },
     gallery: { title: 'Gallery', captions: ['Beach', 'Sunset', 'Pitches', 'Facilities', 'Surroundings', 'Lounge area'] },

@@ -1,11 +1,18 @@
+@use './variables' as *;
+@use './mixins' as *;
 
-@use './variables.scss' as *;
-@use './mixins.scss' as *;
+:root { 
+  color-scheme: light; 
+}
 
-:root { color-scheme: light; }
+* { 
+  box-sizing: border-box; 
+}
 
-* { box-sizing: border-box; }
-html, body, #root { height: 100%; }
+html, body, #root { 
+  height: 100%; 
+}
+
 body {
   margin: 0;
   font-family: $font-sans;
@@ -13,7 +20,10 @@ body {
   background: $bg;
 }
 
-a { color: inherit; text-decoration: none; }
+a { 
+  color: inherit; 
+  text-decoration: none; 
+}
 
 .app-container {
   display: grid;
@@ -26,71 +36,224 @@ header.header {
   top: 0;
   z-index: 30;
   backdrop-filter: saturate(180%) blur(8px);
-  background: rgba(255,255,255,.75);
-  border-bottom: 1px solid rgba(0,0,0,.06);
+  background: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.container { @include container; }
+.container { 
+  @include container; 
+}
 
 nav.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: .8rem 0;
+  padding: 0.8rem 0;
 }
 
-.brand { display: flex; align-items: center; gap: .6rem; font-weight: 800; letter-spacing: .2px; }
+.brand { 
+  display: flex; 
+  align-items: center; 
+  gap: 0.6rem; 
+  font-weight: 800; 
+  letter-spacing: 0.2px; 
+}
+
 .brand .logo {
-  width: 36px; height: 36px; border-radius: .75rem;
+  width: 36px; 
+  height: 36px; 
+  border-radius: 0.75rem;
   background: linear-gradient(135deg, $primary, #6ea8fe);
-  display: grid; place-items: center; color: white; font-weight: 900;
+  display: grid; 
+  place-items: center; 
+  color: white; 
+  font-weight: 900;
 }
 
-.nav-links { display: none; gap: 1rem; }
-.nav-links a { padding: .5rem .75rem; border-radius: .5rem; color: $muted; }
-.nav-links a:hover { background: rgba(11,110,246,.08); color: $text; }
+.nav-links { 
+  display: none; 
+  gap: 1rem; 
+  
+  a { 
+    padding: 0.5rem 0.75rem; 
+    border-radius: 0.5rem; 
+    color: $muted; 
+    
+    &:hover { 
+      background: rgba($primary, 0.08); 
+      color: $text; 
+    }
+  }
+}
 
-.actions { display: flex; align-items: center; gap: .5rem; }
+.actions { 
+  display: flex; 
+  align-items: center; 
+  gap: 0.5rem; 
+}
 
 .hero {
   padding: $space-12 0;
-  background: radial-gradient(1000px 600px at 10% -10%, rgba(11,110,246,.25), transparent 60%);
+  background: radial-gradient(1000px 600px at 10% -10%, rgba($primary, 0.25), transparent 60%);
+  
+  .inner { 
+    @include container; 
+    display: grid; 
+    gap: 1.25rem; 
+    align-items: center; 
+  }
+  
+  h1 { 
+    font-size: clamp(2rem, 6vw, 3rem); 
+    margin: 0; 
+    line-height: 1.1; 
+  }
+  
+  p { 
+    color: $muted; 
+    font-size: 1.05rem; 
+    margin: 0; 
+  }
+  
+  .cta { 
+    @include button; 
+    width: fit-content; 
+  }
 }
-.hero .inner { @include container; display: grid; gap: 1.25rem; align-items: center; }
-.hero h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 0; line-height: 1.1; }
-.hero p { color: $muted; font-size: 1.05rem; margin: 0; }
-.hero .cta { @include button; width: fit-content; }
 
-.gallery { @include container; padding: $space-12 0; }
-.gallery-grid { @include grid(220px, .75rem); }
-.gallery-card { @include card; padding: 0; overflow: hidden; }
-.gallery-card img { width: 100%; height: 180px; object-fit: cover; display: block; }
-.gallery-card .caption { padding: .75rem 1rem; color: $muted; font-size: .95rem; }
-
-.accommodation { @include container; padding: $space-12 0; }
-.accommodation-grid { @include grid(260px, 1rem); }
-.acc-card { @include card; display: grid; gap: .6rem; }
-.acc-card h3 { margin: 0; font-size: 1.25rem; }
-.acc-card p { margin: 0; color: $muted; }
-.acc-card .badge { display: inline-block; background: rgba(0,0,0,.04); padding: .25rem .5rem; border-radius: .5rem; font-size: .85rem; color: $secondary; }
-
-.contact { background: linear-gradient(180deg, rgba(11,110,246,.06), transparent); padding: $space-12 0; }
-.contact .wrap { @include container; display: grid; gap: 1rem; }
-.contact form { @include card; display: grid; gap: .75rem; }
-.field { display: grid; gap: .35rem; }
-.field label { color: $secondary; font-weight: 600; font-size: .95rem; }
-.field input, .field textarea, .field select {
-  padding: .65rem .8rem; border-radius: .6rem; border: 1px solid rgba(0,0,0,.12); font: inherit; background: white;
+.gallery { 
+  @include container; 
+  padding: $space-12 0; 
+  
+  &-grid { 
+    @include grid(220px, 0.75rem); 
+  }
+  
+  &-card { 
+    @include card; 
+    padding: 0; 
+    overflow: hidden; 
+    
+    img { 
+      width: 100%; 
+      height: 180px; 
+      object-fit: cover; 
+      display: block; 
+    }
+    
+    .caption { 
+      padding: 0.75rem 1rem; 
+      color: $muted; 
+      font-size: 0.95rem; 
+    }
+  }
 }
-.field input:focus, .field textarea:focus { outline: 2px solid rgba(11,110,246,.25); border-color: rgba(11,110,246,.55); }
-.submit { @include button; }
 
-footer.footer { border-top: 1px solid rgba(0,0,0,.06); padding: 1rem 0; background: #fff; }
-footer .inner { @include container; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .75rem; color: $muted; }
+.accommodation { 
+  @include container; 
+  padding: $space-12 0; 
+  
+  &-grid { 
+    @include grid(260px, 1rem); 
+  }
+  
+  .acc-card { 
+    @include card; 
+    display: grid; 
+    gap: 0.6rem; 
+    
+    h3 { 
+      margin: 0; 
+      font-size: 1.25rem; 
+    }
+    
+    p { 
+      margin: 0; 
+      color: $muted; 
+    }
+    
+    .badge { 
+      display: inline-block; 
+      background: rgba(0, 0, 0, 0.04); 
+      padding: 0.25rem 0.5rem; 
+      border-radius: 0.5rem; 
+      font-size: 0.85rem; 
+      color: $secondary; 
+    }
+  }
+}
+
+.contact { 
+  background: linear-gradient(180deg, rgba($primary, 0.06), transparent); 
+  padding: $space-12 0; 
+  
+  .wrap { 
+    @include container; 
+    display: grid; 
+    gap: 1rem; 
+  }
+  
+  form { 
+    @include card; 
+    display: grid; 
+    gap: 0.75rem; 
+  }
+}
+
+.field { 
+  display: grid; 
+  gap: 0.35rem; 
+  
+  label { 
+    color: $secondary; 
+    font-weight: 600; 
+    font-size: 0.95rem; 
+  }
+  
+  input, 
+  textarea, 
+  select {
+    padding: 0.65rem 0.8rem; 
+    border-radius: 0.6rem; 
+    border: 1px solid rgba(0, 0, 0, 0.12); 
+    font: inherit; 
+    background: white;
+    
+    &:focus { 
+      outline: 2px solid rgba($primary, 0.25); 
+      border-color: rgba($primary, 0.55); 
+    }
+  }
+}
+
+.submit { 
+  @include button; 
+}
+
+footer.footer { 
+  border-top: 1px solid rgba(0, 0, 0, 0.06); 
+  padding: 1rem 0; 
+  background: $white; 
+  
+  .inner { 
+    @include container; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    gap: 0.75rem; 
+    color: $muted; 
+  }
+}
 
 // Responsive tweaks
 @media (min-width: $bp-md) {
-  .nav-links { display: flex; }
-  .hero .inner { grid-template-columns: 1.1fr .9fr; }
+  .nav-links { 
+    display: flex; 
+  }
+  
+  .hero .inner { 
+    grid-template-columns: 1.1fr 0.9fr; 
+  }
 }

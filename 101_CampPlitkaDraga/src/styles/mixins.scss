@@ -1,3 +1,4 @@
+@use './variables' as *;
 
 @mixin container {
   width: min(1100px, 92vw);
@@ -16,8 +17,16 @@
   font-weight: 600;
   cursor: pointer;
   transition: transform .12s ease, box-shadow .12s ease, background .2s ease;
-  &:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(11,110,246,.25); }
-  &:active { transform: translateY(0); box-shadow:none; }
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(11,110,246,.25);
+  }
+  
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
 }
 
 @mixin card {

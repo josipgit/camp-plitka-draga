@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="inner">
-        <span>© {year} Camp Plitka Draga</span>
+        <span>© {year} Villa Radic</span>
         <span>{t('footer.rights')}</span>
       </div>
     </footer>
